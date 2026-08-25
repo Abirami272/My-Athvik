@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATHVIK | Men's Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        ATH<span>VIK</span>
+    </div>
+
+    <nav class="navbar" id="navbar">
+
+        <a href="#home">Home</a>
+        <a href="#college">College</a>
+        <a href="#office">Office</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <div class="header-right">
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search outfits..."
+            >
+            <button onclick="searchProducts()">🔍</button>
+        </div>
+
+        <div class="cart">
+            🛒
+            <span id="cartCount">0</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            MEN'S STYLE COLLECTION
+        </p>
+
+        <h1>
+            Dress Sharp.<br>
+            <span>Look Confident.</span>
+        </h1>
+
+        <p>
+            Modern outfits designed for college days,
+            internships, meetings and everyday office life.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#college" class="btn">
+                Shop College
+            </a>
+
+            <a href="#office" class="btn outline">
+                Shop Office
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories">
+
+    <div class="category-card college-category">
+
+        <div>
+            <p>CASUAL COLLECTION</p>
+
+            <h2>
+                College<br>
+                Essentials
+            </h2>
+
+            <a href="#college">
+                Explore Collection →
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="category-card office-category">
+
+        <div>
+            <p>FORMAL COLLECTION</p>
+
+            <h2>
+                Office<br>
+                Classics
+            </h2>
+
+            <a href="#office">
+                Explore Collection →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COLLEGE ================= -->
+
+<section class="products-section" id="college">
+
+    <div class="section-heading">
+
+        <div>
+            <p>CASUAL & TRENDY</p>
+
+            <h2>
+                College Outfits
+            </h2>
+        </div>
+
+        <p class="section-description">
+            Comfortable and stylish outfits
+            made for everyday college life.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="img/Layer-11-5.avif"
+                    alt="White Shirt"
+                >
+
+                <span class="tag">
+                    TRENDING
+                </span>
+
+                <button
+                    class="heart"
+                    onclick="toggleHeart(this)"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    College Wear
+                </p>
+
+                <h3>
+                    Premium White Shirt
+                </h3>
+
+                <div class="price">
+                    ₹699
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Premium White T-Shirt')"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="img/myn3"
+                    alt="Denim Shirt"
+                >
+
+                <span class="tag">
+                    NEW
+                </span>
+
+                <button
+                    class="heart"
+                    onclick="toggleHeart(this)"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    College Wear
+                </p>
+
+                <h3>
+                    Classic Denim Shirt
+                </h3>
+
+                <div class="price">
+                    ₹1,099
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Classic Denim Shirt')"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="img/myntra 1.jpg"
+                    alt="Casual Shirt"
+                >
+
+                <button
+                    class="heart"
+                    onclick="toggleHeart(this)"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    College Wear
+                </p>
+
+                <h3>
+                    Oversized Casual Shirt
+                </h3>
+
+                <div class="price">
+                    ₹1299
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Oversized Casual Shirt')"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="img/mytra 2.jpg"
+                    alt="College Fashion"
+                >
+                
+                <span class="tag">
+                    NEW
+                </span>
+
+                <button
+                    class="heart"
+                    onclick="toggleHeart(this)"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    College Wear
+                </p>
+
+                <h3>
+                    Street Style Outfit
+                </h3>
+
+                <div class="price">
+                    ₹1,599
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Street Style Outfit')"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFICE ================= -->
+
+<section class="products-section office-section" id="office">
+
+    <div class="section-heading">
+
+        <div>
+            <p>SMART & PROFESSIONAL</p>
+
+            <h2>
+                Office Wear
+            </h2>
+        </div>
+
+        <p class="section-description">
+            Clean, professional styles for
+            work, meetings and interviews.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+        <!-- Office 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="C:\Users\abi__\OneDrive\Desktop\Aug\Athvik\img\offimg2.jpg"
+                    alt="Formal Shirt"
+                >
+
+                <span class="tag">
+                    BEST SELLER
+                </span>
+
+                <button
+                    class="heart"
+                    onclick="toggleHeart(this)"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Office Wear
+                </p>
+
+                <h3>
+                    Classic White Formal Shirt
+                </h3>
+
+                <div class="price">
+                    ₹2,799
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Classic White Formal Shirt')"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Office 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="C:\Users\abi__\OneDrive\Desktop\Aug\Athvik\img\stylish-businessman-fixing-his-suit.jpg"                  alt="Formal Suit"
+                >
+
+                <button
+                    class="heart"
+                    onclick="toggleHeart(this)"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Office Wear
+                </p>
+
+                <h3>
+                    Modern Business Blazer
+                </h3>
+
+                <div class="price">
+                    ₹1,999
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Modern Business Blazer')"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Office 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="C:\Users\abi__\OneDrive\Desktop\Aug\Athvik\img\offimg1.jpg"
+                    alt="Formal Fashion"
+                >
+
+                <button
+                    class="heart"
+                    onclick="toggleHeart(this)"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Office Wear
+                </p>
+
+                <h3>
+                    Slim Fit Formal Shirt
+                </h3>
+
+                <div class="price">
+                    ₹2,599
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Slim Fit Formal Shirt')"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Office 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="C:\Users\abi__\OneDrive\Desktop\Aug\Athvik\img\offimg3.jpg"
+                    alt="Office Outfit"
+                >
+                <span class="tag">
+                    BEST SELLER
+                </span>
+
+                <button
+                    class="heart"
+                    onclick="toggleHeart(this)"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Office Wear
+                </p>
+
+                <h3>
+                    Executive Office Look
+                </h3>
+
+                <div class="price">
+                    ₹2,999
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Executive Office Look')"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="img/100 nani.jpg"
+            alt="Men Fashion"
+        >
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p>
+            OUR PHILOSOPHY
+        </p>
+
+        <h2>
+            Simple style.<br>
+            Strong personality.
+        </h2>
+
+        <p>
+            ATHVIK is a modern men's fashion brand
+            created for students and young professionals.
+            From your first college presentation to your
+            first office meeting, we help you dress with
+            confidence.
+        </p>
+
+        <button class="dark-btn">
+            Discover ATHVIK
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <p>
+        JOIN THE ATHVIK COMMUNITY
+    </p>
+
+    <h2>
+        Style updates, straight to your inbox.
+    </h2>
+
+    <form onsubmit="subscribe(event)">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button>
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <h2>
+                ATHVIK
+            </h2>
+
+            <p>
+                Modern men's fashion for
+                college & office life.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Shop
+            </h3>
+
+            <a href="#college">
+                College Wear
+            </a>
+
+            <a href="#office">
+                Office Wear
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Company
+            </h3>
+
+            <a href="#about">
+                About Us
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                WhatsApp
+            </a>
+
+            <a href="shivaabi.27@gmail.com">
+                Email Us
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 ATHVIK. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
